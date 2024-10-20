@@ -1,8 +1,6 @@
 package kz.medet;
 
 import kz.medet.config.AppConfig;
-import kz.medet.model.Customer;
-import kz.medet.model.Order;
 import kz.medet.services.Service;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,6 +10,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
         Service service = context.getBean(Service.class);
 
         Scanner in = new Scanner(System.in);
